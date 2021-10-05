@@ -16,7 +16,18 @@ public class UserRegistration {
 
 	}
 	
-    
+	@Test
+    public void Lastname_Shouldbe_True_whenitisproper() {
+        Assert.assertTrue(registration.validName("Singh"));
+
+    }
+
+	public void Lastname_Shouldbe_False_whenitisnotproper() {
+	     Assert.assertFalse(registration.validName("singh"));
+
+	}
+
+	
 
 }
 // this for junit test
