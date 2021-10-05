@@ -10,9 +10,6 @@ public class Regex {
 	public static void main(String[] args) {
         System.out.println("Welcome To User Registration Problem");
 
-		Registration user = new Registration();
-		user.validName();
-		user.validLastName();
 
         }
 }
