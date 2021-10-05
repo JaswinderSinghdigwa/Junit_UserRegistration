@@ -1,6 +1,8 @@
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.bl.moodanalyzer.MoodAnalyser;
 import com.bl.regex.Registration;
 
 public class UserRegistration {
@@ -99,5 +101,14 @@ public class UserRegistration {
         Assert.assertFalse(registration.validemailId("roni.12@mail.com"));
 
 	}
+	
+	  @Test
+	    public void Message_WhenHappy_ShouldReturnSuccessful() {
+	        Assert.assertTrue(MoodAnalyser.analyseMood("User is Happy"));
+	    }
+	    @Test
+	    public void Message_WhenHappy_ShouldReturnFailed() {
+	        Assert.assertFalse(MoodAnalyser.analyseMood("User is Sad"));
+	    }
 
 }
